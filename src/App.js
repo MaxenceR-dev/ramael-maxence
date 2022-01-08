@@ -6,18 +6,21 @@ import Portfolio from "./Components/Portfolio/Portfolio";
 import Contact from "./Components/Contact/Contact";
 import Navbar from "./Components/Navbar/Navbar";
 import NotFound from "./Components/NotFound/NotFound";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
    <>
  <ParticlesContainer />
      <Navbar />
+     
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/portfolio" element={<Portfolio />}/>
       <Route path="/contact" element={<Contact />}/>
       <Route path="/*" element={<NotFound />}/>
     </Routes>
+    <Footer />
       <ParticlesContainer />
 
    </>

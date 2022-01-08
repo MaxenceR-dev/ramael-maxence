@@ -10,7 +10,7 @@ render() {
             params={{
                 "particles": {
                     "number": {
-                        "value": 250,
+                        "value": 150,
                         "density": {
                             "enable": true,
                             "value_area": 1803.4120608655228
@@ -43,7 +43,7 @@ render() {
                         }
                     },
                     "size": {
-                        "value": 1.5,
+                        "value": 1,
                         "random": true,
                         "anim": {
                             "enable": false,
@@ -61,7 +61,7 @@ render() {
                     },
                     "move": {
                         "enable": true,
-                        "speed": 6,
+                        "speed": 2,
                         "direction": "none",
                         "random": false,
                         "straight": false,
