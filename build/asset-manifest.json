@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ramael-maxence/static/css/main.3b15e9b1.css",
+    "main.js": "/ramael-maxence/static/js/main.03379c4f.js",
+    "index.html": "/ramael-maxence/index.html",
+    "main.3b15e9b1.css.map": "/ramael-maxence/static/css/main.3b15e9b1.css.map",
+    "main.03379c4f.js.map": "/ramael-maxence/static/js/main.03379c4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b15e9b1.css",
+    "static/js/main.03379c4f.js"
+  ]
+}
