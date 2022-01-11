@@ -41,10 +41,17 @@ textarea {
 input[type='submit'] {
     margin-top: 25px;
     border: 1px white solid;
+    cursor:pointer;
 }
 
 input[type='submit']:hover {
     background: lightskyblue ;
     border: 1px solid black;
     color: black;
+    
+}
+
+
+.email-content input {
+    width: 100%;
 }

@@ -1,32 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FormContact.css";
-import emailjs from '@emailjs/browser';
 
 
-export default function FormContact() {
+ function FormContact() {
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_r3xv167','template_i0nrewf', e.target, 'user_o7PUBsMNyYvbeJ7P01s0m')
-    .then(res=>{
-      console.log(res);
-    }).catch(err=>console.log(err));
-  }
+
+    sendFeedback("template_i0nrewf", {
+      name,
+      company,
+      phone,
+      email,
+      message,
+    });
+  };
+
+  const sendFeedback = (templateId, variables) => {
+    console.log(templateId)
+    console.log(variables);
+
+    window.emailjs
+      .send("service_r3xv167", templateId, variables,)
+      .then((res) => {
+        console.log("success !");
+        setName("");
+        setCompany("");
+        setPhone("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch(
+        (err) =>
+          (document.querySelector(".form-message").innerHTML =
+            "Une erreur s'est produite, veuillez réessayer.")
+      );
+  };
+
   return (
     <div className="formDiv">
       <h2 className="form-title">Contactez-moi</h2>
-      <form onSubmit={sendEmail}>
-        <input type="text" name="name" placeholder="Votre nom *" />
+      <form>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Votre nom *"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+          required
+        />
+        <div className="email-content">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Votre email *"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            autoComplete="off"
+            required
+          />
+        </div>
 
-        <input type="email" name="user_email" placeholder="Votre email *" />
-        <input type="text" name="company" placeholder="Votre entreprise" />
-        <input type="text" name="phone" placeholder="Votre telephone" />
+        <input
+          type="text"
+          name="company"
+          id="company"
+          placeholder="Votre entreprise"
+          onChange={(e) => setCompany(e.target.value)}
+          value={company}
+        />
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Votre telephone"
+          onChange={(e) => setPhone(e.target.value)}
+          value={phone}
+        />
         <label>Message</label>
-        <textarea name="message" rows="4">
+        <textarea
+          name="message"
+          id="message"
+          rows="4"
+          onChange={(e) => setMessage(e.target.value)}
+          value={message}
+        >
           Bonjour Maxence,
         </textarea>
-        <input type="submit" value="Envoyer" />
+        <input type="submit" value="Envoyer" onClick={handleSubmit} />
+        <div className="form-message"></div>
       </form>
     </div>
   );
 }
+
+export default FormContact;
