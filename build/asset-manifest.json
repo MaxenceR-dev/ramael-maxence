@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/ramael-maxence/static/css/main.3b15e9b1.css",
-    "main.js": "/ramael-maxence/static/js/main.03379c4f.js",
-    "index.html": "/ramael-maxence/index.html",
-    "main.3b15e9b1.css.map": "/ramael-maxence/static/css/main.3b15e9b1.css.map",
-    "main.03379c4f.js.map": "/ramael-maxence/static/js/main.03379c4f.js.map"
+    "main.css": "/static/css/main.6572b599.css",
+    "main.js": "/static/js/main.ebbce0e6.js",
+    "static/media/React-JS.png": "/static/media/React-JS.dd6d32e080c956471f02.png",
+    "static/media/mern.jpg": "/static/media/mern.b175bdc2a0b91c9bb6dc.jpg",
+    "static/media/moviedb.jpg": "/static/media/moviedb.f0b4a2b3ade2a864fca8.jpg",
+    "index.html": "/index.html",
+    "main.6572b599.css.map": "/static/css/main.6572b599.css.map",
+    "main.ebbce0e6.js.map": "/static/js/main.ebbce0e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b15e9b1.css",
-    "static/js/main.03379c4f.js"
+    "static/css/main.6572b599.css",
+    "static/js/main.ebbce0e6.js"
   ]
 }
